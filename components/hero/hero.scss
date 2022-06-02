@@ -2,12 +2,12 @@
 @import '../mixin.scss';
 
 .section_hero {
-    background-image: url('../assets/image/bg.jpg');
+    background-image: url('./assets/image/bg.jpg');
     background-position: center;
     background-repeat: no-repeat; 
     height: 100vh;
     &.ligth{
-        background-image: url('../assets/ligth/bg_ligth.jpg');
+        background-image: url('./assets/ligth/bg_ligth.jpg');
     }
 }
 

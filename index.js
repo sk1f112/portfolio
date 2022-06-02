@@ -129,14 +129,6 @@ function active(event) {
 
 // Photos switch //
 
-function sleep(millis) {
-    var t = (new Date()).getTime();
-    var i = 0;
-    while (((new Date()).getTime() - t) < millis) {
-        i++;
-    }
-}
-
 portfolioBtns.forEach(item => item.addEventListener('click', (e) => {
     let btn = e.target.classList.contains('button')
     if (btn) {
@@ -146,7 +138,6 @@ portfolioBtns.forEach(item => item.addEventListener('click', (e) => {
 const seasons = ['winter', 'spring', 'summer', 'autumn']
 function changePhoto(dataset) {
     seasons.forEach(season => {
-        sleep(20);
         if (season === dataset) {
             portfolioImages.forEach((img, index) => {
                 img.src = `./assets/image/${season}/${index + 1}.jpg`;
