@@ -1,0 +1,44 @@
+@import '../base.scss';
+@import '../mixin.scss';
+
+.section_hero {
+    background-image: url('../assets/image/bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat; 
+    height: 100vh;
+    &.ligth{
+        background-image: url('../assets/ligth/bg_ligth.jpg');
+    }
+}
+
+.container_hero {
+    @include adaptiv-value('padding-left', 80, 20, 1);
+}
+
+.hero_text {
+    @include adaptiv-value('padding-top', 250, 130, 1);
+
+    &_title{
+        font-family: 'Merriweather';
+        font-weight: 700;
+        @include adaptiv-value('font-size', 60, 30, 1);
+        line-height: 120px;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    &_subtitle{
+        width: 480px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 40px;
+        margin: 0;
+        @include adaptiv-value('line-height', 40, 24, 1);
+        @include adaptiv-value('margin-bottom', 25, 60, 1);
+        @media (max-width: $mw768) {
+            width: 390px;
+        }
+        @media (max-width: $mw420) {
+            width: 290px;
+        }
+    }
+}

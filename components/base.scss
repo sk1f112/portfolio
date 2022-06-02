@@ -1,0 +1,137 @@
+@import '../components/mixin.scss';
+/* Colors */
+
+$black: #000000;
+$gold: #bdae82;
+$white: #ffffff;
+
+/* Breakpoints */
+
+$mw1440: 1439.99px;
+$mw1280: 1279.99px;
+$mw1024: 1023.99px;
+$mw992: 991.99px;
+$mw768: 767.99px;
+$mw475: 474.99px;
+$mw420: 419.99px;
+$mw320: 319.99px;
+
+/* Styles */
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+.body {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: normal;
+    color: $white;
+    background-color: $black;
+    margin: 0;
+    &._lock{
+        overflow: hidden;
+    }
+    &.ligth{
+        color: $black;
+        background-color: $white;
+    }
+}
+
+.container{
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+
+.button{
+    border-radius: 0px;
+    font-size: 20px;
+    line-height: 40px;
+    height: 55px;
+    width: 220px;
+    cursor: pointer;
+    transition: all ease 0.5s;
+}
+
+.gold{
+    background: $gold;
+    color: #000000;
+    transition: all ease 0.5s;
+    &:hover{
+        color: $white;
+    }
+}
+
+.black{
+    border: solid 1px $gold;
+    background: $black;
+    color: $gold;
+    transition: all ease 0.5s;
+    &:hover{
+        color: $white;
+    }
+}
+
+
+.section_title {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    @media (max-width: $mw420) {
+        width: 80%;
+
+    }
+    @include adaptiv-value('margin-bottom', 60, 45, 1);
+    &_text{
+        font-family: 'Merriweather';
+        font-style: normal;
+        font-weight: 700;
+        @include adaptiv-value('font-size', 40, 30, 1);
+        @include adaptiv-value('line-height', 80, 38, 1);
+        margin: 0;
+        color: $gold;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 1;
+        overflow: hidden;
+        &.ligth{
+            color: $black;
+        }
+        &:before,
+        &:after {
+            content: '';
+            display: inline-block;
+            width: 100%;
+            height: 1px;
+            background: $gold;
+            z-index: -1;
+            position: relative;
+            vertical-align: middle;
+        }
+        &:before {
+            right: 15px;
+            margin: 0 0 0 -100%;
+           }
+        
+        &.ligth:before{
+            background: $black;
+        }
+        &:after {
+            left: 15px;
+            margin: 0 -100% 0 0;
+        }
+        &.ligth:after{
+            background: $black;
+        }
+        
+    }
+}
