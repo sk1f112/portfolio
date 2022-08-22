@@ -3,11 +3,11 @@
 
 .section_contact {
     padding: 60px 0 140px 0;
-    background-image: url('../assets/image/contacts.jpg');
+    background-image: url('./assets/image/contacts.jpg');
     background-position: center;
     background-repeat: no-repeat; 
     &.ligth{
-        background-image: url('../assets/ligth/contacts_ligth.jpg');
+        background-image: url('./assets/ligth/contacts_ligth.jpg');
     }
 }
 
