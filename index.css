@@ -1056,8 +1056,10 @@ html {
   justify-content: center;
 }
 
-.container_image_img {
-  width: 100%;
+@media (max-width: 767.99px) {
+  .container_image_img {
+    width: 100%;
+  }
 }
 
 /* Colors */
