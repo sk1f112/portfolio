@@ -1057,14 +1057,7 @@ html {
 }
 
 .container_image_img {
-  /* Пасхалка */
-  width: 450px;
-  height: 560px;
-}
-@media (max-width: 767.99px) {
-  .container_image_img {
-    width: 100%;
-  }
+  width: 100%;
 }
 
 /* Colors */

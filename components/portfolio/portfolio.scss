@@ -41,11 +41,5 @@
     justify-content: center;
 }
 .container_image_img {
-    /* Пасхалка */
-    width: 450px;
-    height: 560px;
-    @media (max-width: $mw768) {
-        width: 100%;
-        
-    }
+    width: 100%;
 }
